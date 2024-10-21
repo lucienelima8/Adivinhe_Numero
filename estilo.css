@@ -1,0 +1,220 @@
+:root {
+    --cor_fundo: rgba(130, 130, 236, 0.384);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100%; /*largura de 100% da página*/
+    height: 100vh; /*altura total da página*/
+    padding: 5rem;
+    text-align: center;
+    background-color: var(--cor_fundo);
+
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+h4 {
+    margin-bottom: 0;
+    /*opacity: 0.6;*/
+}
+
+/*label{
+    color: blue;
+    font-weight: bolder;
+
+    
+}*/
+
+input {
+    padding-left: .2rem;
+
+}
+
+button {
+    margin-top: 1rem;
+    padding: .2rem;
+    cursor: pointer;
+    color: black;
+    /*font-weight: bolder;*/
+    font-size: .8rem;
+    /*border-radius: 15px;*/
+    margin-left: .6rem;
+
+}
+
+button:hover {
+    font-weight: bolder;
+    background-color: var(--cor_fundo);
+    
+}
+
+p{
+    color: red;
+    margin-top: 1rem;
+    font-weight: bolder;          
+    font-size: 1.2rem;          
+
+
+}
+
+
+
+
+        /*Responsividade*/
+
+@media screen and (max-width: 1115px) {
+    body {
+        max-width: auto;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    h4, input, button {
+        font-size: .7rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Esse trabalho foi feito por Luciene Lima*/
