@@ -1,68 +1,94 @@
 
-      //Gerando um número aleatório
+       //Gerando um número aleatório
 
 //Math.floor retorna no menor número inteiro dentro da condição descrita
-let num_digitado = Math.floor(Math.random() * 100) + 1;
+const numero_aleatorio = Math.floor(Math.random() * 100) + 1;
 
 //quantidade de tentativas permitidas
 let total_tentativas = 10;
 
 
 
-      //Função pra calcular
+
+        //Função pra calcular
 
 function adivinhar() {
 
-    const num_digitado = document.getElementById("numero").value;
-
-    const resultado = document.getElementById("resultado");
-
-    const palpite = parseInt(num_digitado.value);
+    //palpite receberá o número que o usuário digitar no input
+    const palpite = parseInt(document.getElementById("numero").value);
 
 
-    //Verificando o palpite se é válido
+
+
+    //Verificando se o palpite  é válido
+
+    //palpite deve ser < 1 e > 100
     if (isNaN(palpite) || palpite < 1 || palpite > 100) {
+       
+        //Mensagem caso o usuário digite um número menor que 1 e maior que 100
+        document.getElementById("resultado").innerHTML = "Por favor, digite um número válido entre 1 e 100.";
         return;
 
     }
 
-    //Diminuindo a quantidade de tentativas
-    tentativas_restantes--;
 
 
-    //Verificando se o palpite está correto
-    if (palpite === num_digitado) {
-        resultado.innerHTML = `Parabéns! Você acertou ${numero_digitado} em ${10 - tentativas_restantes} tentativas!`;
+
+        //Diminuindo a quantidade de tentativas
+    
+    //total de tentativas ir decrementando (diminuindo de si mesma a quantidade)
+    total_tentativas--;
+
+
+
+
+        //Verificando se o palpite está correto
+
+    if (palpite === numero_aleatorio) {  //o palpite do usuário estava igual ao número sorteado
+
+        //Mensagem de acerto, palpite correto.
+        document.getElementById("resultado").innerHTML = `Parabéns! Você acertou ${10 - total_tentativas} tentativas!`;
         finalizarJogo();
 
-    }else if (tentativas_restantes === 0){
-        resultado.innerHTML = `Você perdeu! O número correto era ${numero_digitado}.`;
+
+    }else if (total_tentativas === 0){ //zeeou a quantidade de tentativas e não acertou
+
+        document.getElementById("resultado").innerHTML = `Você perdeu! O número correto era ${numero_aleatorio}.`;
         finalizarJogo();
+
 
     }else {
-        //Dica se é maior ou menor ao palpite do usuário
-            resultado.innerHTML = `Errado! O número é ${palpite < numero_digitado ? 'maior' : 'menor'}. Você tem ${tentativas_restantes} tentativas restantes.`;
+
+        //Mensagem com dica se é maior ou menor ao palpite do usuário
+        document.getElementById("resultado").innerHTML = `Errado! O número é ${palpite < numero_aleatorio ? 'maior' : 'menor'}. Você tem ${total_tentativas} tentativas restantes.`;
 
     }
 
 
-    //Limpando o input
-    //input recebe vazio
-    num_digitado.value = '';
-    num_digitado.focus();
 
+
+        //Limpando o input
+  
+    //para acessar o valor digitado no input para processá-lo ou invalidá-lo  
+    document.getElementById("numero").value;
+
+    //focus para que após o palpite o cursor volte pro input para que o usuário volte a digitar nele sem ter que clicar nele
+    document.getElementById("numero").focus();
+
+
+
+
+        //Desabilitando o input e btn ao encerrar o jogo
 
     function finalizarJogo() {
-        //Desabilitando o campo de entrada e o btn qndo terminar o jogo
+
+        //Desabilita o campo de entrada quando temrinar o jogo
         document.getElementById("numero").disabled = true;
+
+        //Desabilita o primeiro botão encontrado quando terminar o jogo
         document.querySelector("button").disabled = true;
 
     }
-
-
-    
-
-
 
 
 }
@@ -70,8 +96,6 @@ function adivinhar() {
 
 
 
-      //Gerando um número aleatório
-const numero_aleatorio = Math.floor(Math.random() * 100)
 
 
 

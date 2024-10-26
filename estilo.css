@@ -73,6 +73,20 @@ p{
 }
 
 
+footer {
+    color: black;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    letter-spacing: 2px; /*para distanciar as letras*/
+    margin-top: 8rem;
+    margin-bottom: 0;
+    font-size: 10px;
+    font-weight: bolder;
+    white-space: wrap; /*pra ter quebra de linha*/
+}
+
+
 
 
         /*Responsividade*/
