@@ -19,6 +19,29 @@ body {
 
 }
 
+.div {
+
+    /*border: 1px solid violet;*/
+    border-radius: 15px;
+    /*padding: 20px;*/
+    text-align: center;
+    padding: 1rem;
+
+    width: 40rem;
+    height: 20rem;
+    
+    /*margem*/
+    margin: 2rem auto; /*pra deixar o elemento no meio do site*/
+
+    background: linear-gradient(to top, right, var(--cor_fundo), #ccc, green, black, blue);
+
+    /*box-shadow: 15px 10px 8px rgb(85, 6, 85);*/
+    box-shadow: 15px 10px 8px rgba(85, 6, 85, 0.699);
+
+    
+
+}
+
 h1 {
     color: black;
     text-align: center;
@@ -96,6 +119,12 @@ footer {
         max-width: auto;
         justify-content: center;
         text-align: center;
+
+    }
+
+    .div{ 
+        width: auto;
+        height: 20rem;
 
     }
 
