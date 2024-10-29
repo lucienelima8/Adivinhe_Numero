@@ -47,7 +47,7 @@ function adivinhar() {
     if (palpite === numero_aleatorio) {  //o palpite do usuário estava igual ao número sorteado
 
         //Mensagem de acerto, palpite correto.
-        document.getElementById("resultado").innerHTML = `Parabéns! Você acertou ${10 - total_tentativas} tentativas!`;
+        document.getElementById("resultado").innerHTML = `Parabéns! Você acertou  em  ${10 - total_tentativas} tentativas!`;
         finalizarJogo();
 
 
