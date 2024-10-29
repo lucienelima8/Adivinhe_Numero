@@ -126,6 +126,8 @@ footer {
         width: auto;
         height: 20rem;
 
+        margin-top: 6rem;
+
 
     }
     
@@ -145,6 +147,25 @@ footer {
         font-size: 1rem;          
         
     }
+
+}
+
+        /*Responsividade*/
+
+@media screen and (max-width: 845px) {
+
+    body {
+        padding: 0;
+    }
+
+    .div{ 
+        width: 20rem;
+        height: 20rem;
+
+
+
+    }
+
 
 }
 
